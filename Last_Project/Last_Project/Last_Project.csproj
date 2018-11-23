@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{478E20C4-C804-45AA-BCE8-A7DB8B95C4E4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Last_Project</RootNamespace>
+    <AssemblyName>Last_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>ProductsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>ProductsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>ProductsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>ProductsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsTablesController.cs" />
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>ProductsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="ProductsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsTable.cs">
+      <DependentUpon>ProductsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\elegent-font\arrow-up-down.svg" />
+    <Content Include="fonts\elegent-font\arrow_triangle-up.svg" />
+    <Content Include="fonts\elegent-font\arrow_triangle-up_alt.svg" />
+    <Content Include="fonts\elegent-font\arrow_triangle-up_alt2.svg" />
+    <Content Include="fonts\elegent-font\arrow_up-down_alt.svg" />
+    <Content Include="fonts\elegent-font\arrow_up.svg" />
+    <Content Include="fonts\elegent-font\arrow_up_alt.svg" />
+    <Content Include="fonts\elegent-font\gpl_license.txt" />
+    <Content Include="fonts\elegent-font\icon_adjust-horiz.svg" />
+    <Content Include="fonts\elegent-font\icon_adjust-vert.svg" />
+    <Content Include="fonts\elegent-font\icon_archive.svg" />
+    <Content Include="fonts\elegent-font\icon_archive_alt.svg" />
+    <Content Include="fonts\elegent-font\icon_bag.svg" />
+    <Content Include="fonts\elegent-font\icon_bag_alt.svg" />
+    <Content Include="fonts\elegent-font\index.html" />
+    <Content Include="fonts\elegent-font\lte-ie7.js" />
+    <Content Include="fonts\elegent-font\mit_license.txt" />
+    <Content Include="fonts\elegent-font\style.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\themify\index.html" />
+    <Content Include="fonts\themify\readme.txt" />
+    <Content Include="fonts\themify\themify-icons.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\087e55f7edf111b7375c42c2f235b0f9.jpg" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\1414_Sunsetters.jpg" />
+    <Content Include="images\2018-New-Arrival-Factory-Wholesale-Price-Modern-Home-Furniture-1809-.jpg" />
+    <Content Include="images\472966e3424301fe09d4b0b7287c2128.jpg" />
+    <Content Include="images\50935_2820638x850.jpg" />
+    <Content Include="images\6f9e376c7b4202fb34eb8873d1f50e0d.jpg" />
+    <Content Include="images\93787155.jpg" />
+    <Content Include="images\a.jpg" />
+    <Content Include="images\a2b1edd4-df2b-11e6-8d77-061a5b839217.jpg" />
+    <Content Include="images\Accessories_Almanac_Oscar_Heyman_Sapphire_Diamond_Earring_Jewelry_Photographer_Sally_Griffith_Fashion_Stylist_Paul_Simon_Djite_Fashion_writer_Tara_Lamont_Djite.jpg" />
+    <Content Include="images\auction.jpg" />
+    <Content Include="images\auctionplus-logo-small3.png" />
+    <Content Include="images\Bandeau_E-shop_-_Cre_oles.jpg" />
+    <Content Include="images\banner-01.jpg" />
+    <Content Include="images\banner-02.jpg" />
+    <Content Include="images\banner-03.jpg" />
+    <Content Include="images\banner-04.jpg" />
+    <Content Include="images\banner-05.jpg" />
+    <Content Include="images\banner-06.jpg" />
+    <Content Include="images\banner-07.jpg" />
+    <Content Include="images\banner-08.jpg" />
+    <Content Include="images\banner-09.jpg" />
+    <Content Include="images\banner-10.jpg" />
+    <Content Include="images\banner-11.jpg" />
+    <Content Include="images\banner-12.jpg" />
+    <Content Include="images\banner-13.jpg" />
+    <Content Include="images\banner-14.jpg" />
+    <Content Include="images\BDS.png" />
+    <Content Include="images\bfe1f8058399b427ea4be0e2fbdd44e5.jpg" />
+    <Content Include="images\bg-01.jpg" />
+    <Content Include="images\bg-banner-01.jpg" />
+    <Content Include="images\bg-banner-02.jpg" />
+    <Content Include="images\bg-video-01.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bgg.png" />
+    <Content Include="images\blog-01.jpg" />
+    <Content Include="images\blog-02.jpg" />
+    <Content Include="images\blog-03.jpg" />
+    <Content Include="images\blog-04.jpg" />
+    <Content Include="images\blog-05.jpg" />
+    <Content Include="images\blog-06.jpg" />
+    <Content Include="images\blog-07.jpg" />
+    <Content Include="images\blog-08.jpg" />
+    <Content Include="images\blog-09.jpg" />
+    <Content Include="images\blog-10.jpg" />
+    <Content Include="images\blood-drop-in-hand-design-for-world-blood-donor-vector-14675864.jpg" />
+    <Content Include="images\cat.jpg" />
+    <Content Include="images\chair_ottoman.jpg" />
+    <Content Include="images\chic-living-rooms-french-chalet-room-2-shabby-furniture-sets.jpg" />
+    <Content Include="images\cloth 1.jpg" />
+    <Content Include="images\cloth 10.jpg" />
+    <Content Include="images\cloth 11.jpg" />
+    <Content Include="images\cloth 2.jpg" />
+    <Content Include="images\cloth 3.jpg" />
+    <Content Include="images\cloth 4.jpg" />
+    <Content Include="images\cloth 5.jpg" />
+    <Content Include="images\cloth 6.jpg" />
+    <Content Include="images\cloth 7.jpg" />
+    <Content Include="images\cloth 8.jpg" />
+    <Content Include="images\cloth 9.jpg" />
+    <Content Include="images\cropped-20130802_151359.jpg" />
+    <Content Include="images\CSa5q5WWoAAuEaH.jpg" />
+    <Content Include="images\d2a08a4eff88c5f4ff1a10116bae9d00.jpg" />
+    <Content Include="images\discover.png" />
+    <Content Include="images\DSC00314-2.jpg" />
+    <Content Include="images\Eauction%281%29.png" />
+    <Content Include="images\ebf2328a946b37ed43b5188ee6af00a4.jpg" />
+    <Content Include="images\express.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\fbg.jpg" />
+    <Content Include="images\fbg2.jpg" />
+    <Content Include="images\fbg3.jpg" />
+    <Content Include="images\fbg4.jpg" />
+    <Content Include="images\fbg5.jpg" />
+    <Content Include="images\file.jpg" />
+    <Content Include="images\frbg1.jpg" />
+    <Content Include="images\furniture 1.jpg" />
+    <Content Include="images\furniture 10.jpg" />
+    <Content Include="images\furniture 11.jpg" />
+    <Content Include="images\furniture 2.jpg" />
+    <Content Include="images\furniture 3.jpg" />
+    <Content Include="images\furniture 4.jpg" />
+    <Content Include="images\furniture 5.jpg" />
+    <Content Include="images\furniture 6.jpg" />
+    <Content Include="images\furniture 7.jpg" />
+    <Content Include="images\furniture 8.jpg" />
+    <Content Include="images\furniture 9.jpg" />
+    <Content Include="images\gallery-01.jpg" />
+    <Content Include="images\gallery-02.jpg" />
+    <Content Include="images\gallery-03.jpg" />
+    <Content Include="images\gallery-04.jpg" />
+    <Content Include="images\gallery-05.jpg" />
+    <Content Include="images\gallery-06.jpg" />
+    <Content Include="images\gallery-07.jpg" />
+    <Content Include="images\gallery-08.jpg" />
+    <Content Include="images\gallery-09.jpg" />
+    <Content Include="images\gallery-10.jpg" />
+    <Content Include="images\gallery-11.jpg" />
+    <Content Include="images\gallery-12.jpg" />
+    <Content Include="images\gallery-13.jpg" />
+    <Content Include="images\gallery-14.jpg" />
+    <Content Include="images\gallery-15.jpg" />
+    <Content Include="images\heading-pages-01.jpg" />
+    <Content Include="images\heading-pages-02.jpg" />
+    <Content Include="images\heading-pages-03.jpg" />
+    <Content Include="images\heading-pages-04.jpg" />
+    <Content Include="images\heading-pages-05.jpg" />
+    <Content Include="images\heading-pages-06.jpg" />
+    <Content Include="images\hero_door_banner_mgws2.jpg" />
+    <Content Include="images\houses-plans-for-sale-medium-size-of-for-houses-in-best-house-plans-for-sale-online-modern.jpg" />
+    <Content Include="images\hudsons-furniture-sarasota-fl-medium-size-of-living-furniture-mattress-outlet-fl-furniture-hudsons-furniture-store-sarasota-fl.jpg" />
+    <Content Include="images\icon-header-01.png" />
+    <Content Include="images\icon-header-02.png" />
+    <Content Include="images\icon-position-map.png" />
+    <Content Include="images\il_fullxfull.857578642_nz81.jpg" />
+    <Content Include="images\images %281%29.jpg" />
+    <Content Include="images\images %281%29.png" />
+    <Content Include="images\images %282%29.jpg" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\images.png" />
+    <Content Include="images\Iris-Scott-Talented-Artist-Only-Uses-Her-Fingers-To-Draw-1.jpg" />
+    <Content Include="images\item-01.jpg" />
+    <Content Include="images\item-02.jpg" />
+    <Content Include="images\item-03.jpg" />
+    <Content Include="images\item-04.jpg" />
+    <Content Include="images\item-05.jpg" />
+    <Content Include="images\item-06.jpg" />
+    <Content Include="images\item-07.jpg" />
+    <Content Include="images\item-08.jpg" />
+    <Content Include="images\item-09.jpg" />
+    <Content Include="images\item-10.jpg" />
+    <Content Include="images\item-11.jpg" />
+    <Content Include="images\item-12.jpg" />
+    <Content Include="images\item-13.jpg" />
+    <Content Include="images\item-14.jpg" />
+    <Content Include="images\item-15.jpg" />
+    <Content Include="images\item-16.jpg" />
+    <Content Include="images\item-17.jpg" />
+    <Content Include="images\item-cart-01.jpg" />
+    <Content Include="images\item-cart-02.jpg" />
+    <Content Include="images\item-cart-03.jpg" />
+    <Content Include="images\item-cart-04.jpg" />
+    <Content Include="images\item-cart-05.jpg" />
+    <Content Include="images\item-cart-06.jpg" />
+    <Content Include="images\j1.jpg" />
+    <Content Include="images\j2.jpg" />
+    <Content Include="images\j3.jpg" />
+    <Content Include="images\jbg.jpg" />
+    <Content Include="images\jbg2.jpg" />
+    <Content Include="images\jewellary 1.jpg" />
+    <Content Include="images\jewellary 2.jpg" />
+    <Content Include="images\jewellary 3.jpg" />
+    <Content Include="images\jewellary 4.jpg" />
+    <Content Include="images\jewellary 5.jpg" />
+    <Content Include="images\jewellary 6.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\man.png" />
+    <Content Include="images\master-slide-01.jpg" />
+    <Content Include="images\master-slide-02.jpg" />
+    <Content Include="images\master-slide-03.jpg" />
+    <Content Include="images\master-slide-04.jpg" />
+    <Content Include="images\master-slide-05.jpg" />
+    <Content Include="images\master-slide-06.jpg" />
+    <Content Include="images\master-slide-07.jpg" />
+    <Content Include="images\master-slide-08.jpg" />
+    <Content Include="images\mastercard.png" />
+    <Content Include="images\MR-Online-Auction-Logo.png" />
+    <Content Include="images\Oil-Canvas-Painting-French-Listed-artist-full-7-720-97-r-ffffff-5.jpg" />
+    <Content Include="images\Oil-canvas-painting-listed-artist-Dutch-full-5-720-99-l-59-ea.jpg" />
+    <Content Include="images\open-hand-begging-730636_400x400.png" />
+    <Content Include="images\Paris.jpg" />
+    <Content Include="images\paypal.png" />
+    <Content Include="images\product-detail-01.jpg" />
+    <Content Include="images\product-detail-02.jpg" />
+    <Content Include="images\product-detail-03.jpg" />
+    <Content Include="images\Screenshot %2848%29.png" />
+    <Content Include="images\Screenshot %2862%29.png" />
+    <Content Include="images\shirt.jpg" />
+    <Content Include="images\shop-item-09.jpg" />
+    <Content Include="images\sparkling-diamond-earrings-for-women.jpg" />
+    <Content Include="images\thumb-item-01.jpg" />
+    <Content Include="images\thumb-item-02.jpg" />
+    <Content Include="images\thumb-item-03.jpg" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\TST-LTHRPLAIN-K-1-600x750.jpg" />
+    <Content Include="images\Untitled-5.jpg" />
+    <Content Include="images\video-16-9.jpg" />
+    <Content Include="images\visa.png" />
+    <Content Include="images\webmaster.jpg" />
+    <Content Include="ProductsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductsModel.edmx</DependentUpon>
+      <LastGenOutput>ProductsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProductsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductsModel.edmx</DependentUpon>
+      <LastGenOutput>ProductsModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="ProductsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProductsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ProductsModel.edmx.diagram">
+      <DependentUpon>ProductsModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="fonts\Poppins-Black.ttf" />
+    <Content Include="fonts\Poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-Bold.ttf" />
+    <Content Include="fonts\Poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="fonts\Poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="fonts\Poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-Italic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-Light.ttf" />
+    <Content Include="fonts\Poppins\Poppins-LightItalic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-Medium.ttf" />
+    <Content Include="fonts\Poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-Regular.ttf" />
+    <Content Include="fonts\Poppins\Poppins-SemiBold.ttf" />
+    <Content Include="fonts\Poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="fonts\Poppins\Poppins-Thin.ttf" />
+    <Content Include="fonts\Poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="fonts\themify\Themify IconFonts 5-23-2014.json" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductsTables\Create.cshtml" />
+    <Content Include="Views\ProductsTables\Delete.cshtml" />
+    <Content Include="Views\ProductsTables\Details.cshtml" />
+    <Content Include="Views\ProductsTables\Edit.cshtml" />
+    <Content Include="Views\ProductsTables\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="css\" />
+    <Folder Include="fonts\font-awesome-4.7.0\" />
+    <Folder Include="fonts\ionicons-2.0.1\" />
+    <Folder Include="fonts\Linearicons-Free-1.0.0\" />
+    <Folder Include="fonts\montserrat\" />
+    <Folder Include="includes\" />
+    <Folder Include="js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1551</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1551/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
